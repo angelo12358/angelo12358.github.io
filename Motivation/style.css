@@ -1,3 +1,9 @@
+h1{
+   font-size: 50px;
+   text-align: center;
+   color:brown
+}
+
 body {
     background-image: url("https://www.pequeocio.com/wp-content/uploads/2018/05/poseidon-dios-del-mar.jpg");
 }
@@ -5,5 +11,5 @@ body {
 a {
   font-size: 30px;
   color: purple;
-  background-color: aqua;
+background-color: aqua;
 }
