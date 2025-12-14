@@ -1,9 +1,240 @@
-<html>
-	<head>
-		<title>My First Web Page</title>
-	</head>
-	<body>
-		<h1>Welcome to My First Web Page</h1>
-		<p>This is an HTML page that I created in TextEdit.</p>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Motivation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: slideDown 0.8s ease-out;
+            padding: 50px 30px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+            border-radius: 20px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.6);
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .quote {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            font-size: 1.3em;
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .goals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .goal-item {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .goal-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .goal-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.6);
+            }
+            50% {
+                text-shadow: 0 0 40px rgba(102, 126, 234, 1), 0 0 80px rgba(118, 75, 162, 0.8);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Your Personal Motivation ✨</h1>
+            <p>Every day is a new opportunity to be better</p>
+        </div>
+
+        <div class="card">
+            <h2>🎯 Your Purpose</h2>
+            <p>Remember why you started. No matter how difficult the path is, you have the power to achieve it. Every step you take brings you closer to your goals and becoming the best version of yourself.</p>
+            <div class="quote">
+                "Success is not a destination, it is a journey. Enjoy every moment of the path."
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💪 Your Strength</h2>
+            <p>You are stronger than you think. You have overcome challenges before and you can do it again. Your capacity for resilience and determination is incomparable. Trust yourself.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌟 Your Goals</h2>
+            <div class="goals">
+                <div class="goal-item">
+                    <h3>Growth</h3>
+                    <p>Improve every day, learn new things and expand your skills.</p>
+                </div>
+                <div class="goal-item">
+                    <h3>Health</h3>
+                    <p>Take care of your body and mind, because they are your greatest investment.</p>
+                </div>
+                <div class="goal-item">
+                    <h3>Happiness</h3>
+                    <p>Seek joy in simple things and appreciate every moment.</p>
+                </div>
+                <div class="goal-item">
+                    <h3>Success</h3>
+                    <p>Achieve your goals and celebrate every achievement, no matter its size.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🚀 Final Message</h2>
+            <p>Don't give up. Great achievements require time and patience. Every failure is a lesson, every obstacle is an opportunity to grow. You are capable of doing extraordinary things.</p>
+            <button class="button" onclick="alert('Remember: Today is the first day of the rest of your life! 💫')">Get Your Daily Motivation</button>
+        </div>
+
+        <div class="footer">
+            <p>Made with 💙 for your daily inspiration</p>
+        </div>
+    </div>
+</body>
 </html>
